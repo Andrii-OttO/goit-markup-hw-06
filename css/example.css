@@ -1,0 +1,19 @@
+.chack-b {
+  position: absolute;
+  display: block;
+  width: 16px;
+  height: 15px;
+  margin-right: 9px;
+  margin-left: 9px;
+  background-image: url(../images/icon-check.svg);
+  z-index: 2;
+}
+.checkbox-icon {
+  display: block;
+  position: relative;
+  z-index: 1;
+}
+
+.ss {
+  display: block;
+}
