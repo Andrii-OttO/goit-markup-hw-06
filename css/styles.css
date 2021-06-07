@@ -683,7 +683,7 @@ address .map {
   top: 50%;
   transform: translate(-50%, -50%);
   background: var(--background);
-  z-index: 100;
+  z-index: 1;
   padding: 40px 39px 41px;
 
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
@@ -719,6 +719,7 @@ address .map {
 }
 .close-button :hover,
 .close-button :focus {
+  fill: var(--blue);
   cursor: pointer;
 }
 .close-simvol {
@@ -731,12 +732,14 @@ address .map {
   text-align: left;
 }
 .recall-text {
+  display: block;
   font-weight: 700;
   font-size: 20px;
   line-height: 1.15;
   text-align: center;
   letter-spacing: 0.03em;
   color: #212121;
+  margin-bottom: 12px;
 }
 .modal-field {
   display: block;
@@ -744,6 +747,9 @@ address .map {
   line-height: 1.16;
   letter-spacing: 0.01em;
   margin-top: 10px;
+}
+.modal-field:nth-child(1) {
+  margin-top: 0px;
 }
 .modal-form {
   width: 100%;
@@ -799,21 +805,34 @@ address .map {
   margin-left: 9px;
   background-image: url(../images/icon-check.svg);
 }
+.checkbox-check:focus + .checkbox-icon {
+  outline-color: red;
+  border-color: #2196f3;
+  box-shadow: 0 0 0 2px black;
+  box-shadow: ;
+}
+
 .checkbox-link {
+  font-style: normal;
+  font-size: 14px;
+  line-height: 1.71;
+  letter-spacing: 0.03em;
+  text-decoration-line: underline;
+  color: #2196f3;
   margin-left: 5px;
 }
 .checkbox-check {
   margin-left: 18px;
   z-index: -1;
   width: 1px;
-  position: absolute; /*!important;
+  position: absolute !important;
   clip: rect(1px 1px 1px 1px); /* IE6, IE7 */
-  /*clip: rect(1px, 1px, 1px, 1px);
+  clip: rect(1px, 1px, 1px, 1px);
   padding: 0 !important;
   border: 0 !important;
   height: 1px !important;
   width: 1px !important;
-  overflow: hidden;*/
+  overflow: hidden;
 }
 .text-inside {
   padding: 12px 0 12px 42px;
